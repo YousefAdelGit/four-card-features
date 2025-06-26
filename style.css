@@ -1,0 +1,108 @@
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+  }
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+h2{
+    color: rgb(76, 78, 97);
+}
+p, h3{
+    color: rgb(105, 112, 119);
+}
+.main-title {
+    justify-items: center;
+}
+.main-title p{
+    text-align: center;
+}
+.card-grid{
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr 1fr;
+    grid-template-areas:
+    ". two ."
+    "one two four"
+    "one three four"
+    ".three .";
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+}
+.card-row {
+    font-size: var(--fs-400);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25);      
+}  
+.card-row img{
+    position: relative;
+    right: -80%;
+}
+.border-supervisor {
+    border-top: 4px solid rgb(69, 211, 211);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}  
+.border-team-builder {
+    border-top: 4px solid rgb(234, 83, 83);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}  
+.border-karma {
+    border-top: 4px solid rgb(252, 175, 74);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}  
+.border-calculator {
+    border-top: 4px solid rgb(84, 158, 242);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}  
+.card-row:nth-child(1) {
+    grid-area: one;
+  }
+  .card-row:nth-child(2) {
+    grid-area: two;
+  }
+  .card-row:nth-child(3) {
+    grid-area: three;
+  }
+  .card-row:nth-child(4) {
+    grid-area: four;
+  }
+  .card-row:nth-child(5) {
+    grid-area: five;
+  }  
+
+  @media screen and (max-width: 950px) {
+    .card-grid {
+      grid-template-areas:
+       'one two'
+       'three four';
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .card-grid {
+      grid-template-areas:
+       'one '
+       'two '
+       'three '
+       'four ';
+    }
+  }
+  
